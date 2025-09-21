@@ -30,6 +30,7 @@ Dataset downloaded via kagglehub
 Train/Test paths defined
 
 import kagglehub
+
 path = kagglehub.dataset_download("meowmeowmeowmeowmeow/gtsrb-german-traffic-sign")
 
 2. Data Preprocessing
@@ -59,6 +60,7 @@ Flipping
 Zooming
 
 4. CNN Model Architecture
+   
 Conv2D(32, (3,3), activation='relu')
 MaxPooling2D(2,2)
 
@@ -71,7 +73,6 @@ Flatten()
 
 Dense(43, activation='softmax')
 
-
 Optimizer: Adam
 
 Loss: Categorical Crossentropy
@@ -79,9 +80,13 @@ Loss: Categorical Crossentropy
 Metrics: Accuracy
 
 5. Model Configurations Tested
-Hidden Layers	Neurons	Patience	Validation Accuracy
+
+6. Hidden Layers	Neurons	Patience	Validation Accuracy
+
 1	64	2	88.17%
+
 2	128	2	92.48%
+
 3	256	2	92.09%
 
 # 📊 Best result achieved: 2 hidden layers, 128 neurons → 92.48% accuracy
